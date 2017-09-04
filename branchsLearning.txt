@@ -1,0 +1,483 @@
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ ssh-keygen -t rsa -C "hellokejian@163.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/admin/.ssh/id_rsa):
+Created directory '/c/Users/admin/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/admin/.ssh/id_rsa.
+Your public key has been saved in /c/Users/admin/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:8fxpU7AKOmmUfQHZE3z+Flp0EMv552p0bXxzG0QJGKM hellokejian@163.com
+The key's randomart image is:
++---[RSA 2048]----+
+|        .+.+o.+o.|
+|        ..=.o..=.|
+|        .E.+..=. |
+|       o + ..ooo |
+|      o S + .+oo+|
+|     . o o o.o++O|
+|      =   . =o oB|
+|     . .   . ..o |
+|             ..  |
++----[SHA256]-----+
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git remote add origin git@github.com:hellokejian/learngit.git
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.255.113' (RSA) to the list of known hosts.
+To git@github.com:hellokejian/learngit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:hellokejian/learngit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git remote add origin git@github.com:hellokejian/learngit.git
+fatal: remote origin already exists.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push -u origin master
+To git@github.com:hellokejian/learngit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:hellokejian/learngit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git remote add origin git@github.com:hellokejian/learngit.git
+fatal: remote origin already exists.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push -u origin master
+To git@github.com:hellokejian/learngit.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:hellokejian/learngit.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git pull --rebase origin master
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:hellokejian/learngit
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: wrote a text file
+Applying: add distribute
+Applying: append GPL
+Applying: understand how stage works
+Applying: git tracks changes
+Applying: this is insertion
+Applying: add test.txt
+Applying: remove text.txt
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push -u origin master
+Counting objects: 23, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (23/23), 2.11 KiB | 0 bytes/s, done.
+Total 23 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+remote: error: GH007: Your push would publish a private email address.
+remote: You can make your email public or disable this protection by visiting:
+remote: http://github.com/settings/emails
+To git@github.com:hellokejian/learngit.git
+ ! [remote rejected] master -> master (push declined due to email privacy restrictions)
+error: failed to push some refs to 'git@github.com:hellokejian/learngit.git'
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push -u origin master
+Counting objects: 23, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (23/23), 2.11 KiB | 0 bytes/s, done.
+Total 23 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+To git@github.com:hellokejian/learngit.git
+   a147f05..6a2f53e  master -> master
+Branch master set up to track remote branch master from origin.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    newInsertion.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        insertion.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push -u origin master
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git add insertion.txt
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git commit -m"delete newIneertion add insertion"
+[master 40b47ae] delete newIneertion add insertion
+ 1 file changed, 1 insertion(+)
+ create mode 100644 insertion.txt
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To git@github.com:hellokejian/learngit.git
+   3893dd3..40b47ae  master -> master
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ git clone git@github.com:hellokejian/gitskills.git
+Cloning into 'gitskills'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+Checking connectivity... done.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit (master)
+$ cd gitskills
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ ls
+README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git check -b dev
+git: 'check' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        checkout
+        check-attr
+        cherry
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git branch
+* dev
+  master
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add readme.txt
+fatal: pathspec 'readme.txt' did not match any files
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add readme.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m readme.md
+On branch dev
+Changes not staged for commit:
+        modified:   README.md
+
+no changes added to commit
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m "branch test"
+On branch dev
+Changes not staged for commit:
+        modified:   README.md
+
+no changes added to commit
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ cat readme.md
+# gitskills
+this is git skills
+Creating a new branch is quick.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add readme.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m "branch test"
+On branch dev
+Changes not staged for commit:
+        modified:   README.md
+
+no changes added to commit
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git checkout dev
+M       README.md
+Already on 'dev'
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ ls
+README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m"branch test"
+[dev fa0cb02] branch test
+ 1 file changed, 1 insertion(+)
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add readme.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m"add hahaha"
+On branch dev
+Changes not staged for commit:
+        modified:   README.md
+
+no changes added to commit
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m"add hahaha"
+[dev 9435ddd] add hahaha
+ 1 file changed, 1 insertion(+)
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ cat README.md
+# gitskills
+this is git skills
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git merge dev
+Already up-to-date.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ cat README.md
+# gitskills
+this is git skills
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git merge dev
+Updating 5539896..9435ddd
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ cat readme.md
+# gitskills
+this is git skills
+Creating a new branch is quick.
+hahaah
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git branch -d dev
+Deleted branch dev (was 9435ddd).
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git branch
+* master
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git branch dev
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git branch
+* dev
+  master
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git add README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git commit -m "AND simple"
+[dev 95fa603] AND simple
+ 1 file changed, 1 insertion(+)
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (dev)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git add README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git commit -m"& simple"
+[master b9815c1] & simple
+ 1 file changed, 1 insertion(+)
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git merge dev
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master|MERGING)
+$ cat readme.md
+# gitskills
+this is git skills
+Creating a new branch is quick.
+hahaah
+<<<<<<< HEAD
+Creating a new branch is quick & simple.
+=======
+Creating a new branch is quick AND simple.
+>>>>>>> dev
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master|MERGING)
+$ git add README.md
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master|MERGING)
+$ git commit -m"conflict is fixed"
+[master ca33cdc] conflict is fixed
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git log
+commit ca33cdceb968078bd0c4818b2fc2b32fbcef0722
+Merge: b9815c1 95fa603
+Author: kejian <hellokejian@163.com>
+Date:   Mon Sep 4 10:54:13 2017 +0800
+
+    conflict is fixed
+
+commit b9815c13b2278d21b0c5113eeeaf198035dafbe1
+Author: kejian <hellokejian@163.com>
+Date:   Mon Sep 4 10:49:06 2017 +0800
+
+    & simple
+
+commit 95fa603267c0c023c358e6abe7c209098112cfbd
+Author: kejian <hellokejian@163.com>
+Date:   Mon Sep 4 10:46:58 2017 +0800
+
+    AND simple
+
+commit 9435ddda65214395ef5974ab83467857b9a7d274
+Author: kejian <hellokejian@163.com>
+Date:   Mon Sep 4 10:39:46 2017 +0800
+
+    add hahaha
+
+commit fa0cb023f362f9e44c5469ce6b7fc78068a1164f
+Author: kejian <hellokejian@163.com>
+Date:   Mon Sep 4 10:38:52 2017 +0800
+
+    branch test
+
+commit 553989672e51d9ee4d587d12baee586b3e3e28e8
+Author: Andy Ke <hellokejian@163.com>
+Date:   Mon Sep 4 10:22:53 2017 +0800
+
+    Update README.md
+
+commit 94196756d2047733de64e9035c3d350fb3d6e836
+Author: Andy Ke <hellokejian@163.com>
+Date:   Mon Sep 4 10:22:19 2017 +0800
+
+    Initial commit
+!
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ !
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git log --graph --pretty=oneline --abbrev-commit
+*   ca33cdc conflict is fixed
+|\
+| * 95fa603 AND simple
+* | b9815c1 & simple
+|/
+* 9435ddd add hahaha
+* fa0cb02 branch test
+* 5539896 Update README.md
+* 9419675 Initial commit
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git reflog
+ca33cdc HEAD@{0}: commit (merge): conflict is fixed
+b9815c1 HEAD@{1}: commit: & simple
+9435ddd HEAD@{2}: checkout: moving from dev to master
+95fa603 HEAD@{3}: commit: AND simple
+9435ddd HEAD@{4}: checkout: moving from master to dev
+9435ddd HEAD@{5}: merge dev: Fast-forward
+5539896 HEAD@{6}: checkout: moving from dev to master
+9435ddd HEAD@{7}: checkout: moving from master to dev
+5539896 HEAD@{8}: checkout: moving from dev to master
+9435ddd HEAD@{9}: commit: add hahaha
+fa0cb02 HEAD@{10}: commit: branch test
+5539896 HEAD@{11}: checkout: moving from dev to dev
+5539896 HEAD@{12}: checkout: moving from master to dev
+5539896 HEAD@{13}: clone: from git@github.com:hellokejian/gitskills.git
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ git branch -d dev
+Deleted branch dev (was 95fa603).
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$ ^C
+
+admin@DESKTOP-875HOM5 MINGW64 ~/learngit/gitskills (master)
+$
